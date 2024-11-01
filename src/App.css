@@ -1,0 +1,80 @@
+#root {
+  margin: 0 auto;
+}
+
+:root {
+  --color-tan: #666253;
+  --color--lime: #c5fe89;
+  --color--lilac: #e4c7fa;
+  --radius: 20px;
+  --border: 1px solid var(--color-tan);
+}
+
+#root {
+  color: var(--color-tan);
+  border: var(--border);
+  border-radius: var(--radius);
+  width: clamp(250px, 250px + 10vw, 700px);
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  line-height: 1;
+}
+
+h1 {
+  font-size: clamp(1rem, 1rem + 2vw, 36px);
+}
+
+p {
+  line-height: 1.15;
+}
+
+img {
+  width: 100%;
+  aspect-ratio: 1/0.5;
+  object-fit: cover;
+
+  border-top-left-radius: var(--radius);
+  border-top-right-radius: var(--radius);
+}
+
+main,
+footer,
+.content {
+  padding-inline: 1rem;
+}
+
+footer,
+.content {
+  text-align: center;
+}
+
+.social--links {
+  width: 100%;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-block: 10px;
+}
+
+.social--links > * {
+  border: var(--border);
+  border-radius: calc(var(--radius) * 2);
+
+  color: var(--color-tan);
+  font-size: clamp(0.7rem, 0.7rem + 1vw, 16px);
+  text-transform: uppercase;
+
+  padding: 5px 15px;
+}
+
+.email {
+  background: var(--color--lime);
+}
+
+.linkedin {
+  background: var(--color--lilac);
+}
